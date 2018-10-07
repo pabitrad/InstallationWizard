@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GlobalizedWizard.View.CoffeeWizardView" Collapsed="true">
+    <Position X="3.75" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\CoffeeWizardView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.View.CoffeeTypeSizePageView" Collapsed="true">
+    <Position X="1" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\CoffeeTypeSizePageView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.View.CoffeeSummaryPageView" Collapsed="true">
+    <Position X="1" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\CoffeeSummaryPageView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.View.CoffeeExtrasPageView" Collapsed="true">
+    <Position X="1" Y="3.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\CoffeeExtrasPageView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.View.WelcomePageView" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\WelcomePageView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.ViewModel.CoffeeExtrasPageViewModel" Collapsed="true">
+    <Position X="2" Y="4" Width="2.25" />
+    <InheritanceLine Type="GlobalizedWizard.ViewModel.CoffeeWizardPageViewModelBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.812" Y="6" />
+        <Point X="4.812" Y="4.375" />
+        <Point X="4.25" Y="4.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEgAAAAAAAAAAAAgAECAAAAACAARAAAAAAAAAAEA=</HashCode>
+      <FileName>ViewModel\CoffeeExtrasPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.ViewModel.CoffeeSummaryPageViewModel" Collapsed="true">
+    <Position X="2" Y="5" Width="2.5" />
+    <InheritanceLine Type="GlobalizedWizard.ViewModel.CoffeeWizardPageViewModelBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.812" Y="6" />
+        <Point X="4.812" Y="5.375" />
+        <Point X="4.5" Y="5.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEBAAAAgAQAAAACgAEAAAgAAAAABAAAAAAAAGAAA=</HashCode>
+      <FileName>ViewModel\CoffeeSummaryPageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.ViewModel.WelcomePageViewModel" Collapsed="true">
+    <Position X="2" Y="2" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="GlobalizedWizard.ViewModel.CoffeeWizardPageViewModelBase" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.812" Y="6" />
+        <Point X="4.812" Y="2.438" />
+        <Point X="4.25" Y="2.438" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModel\WelcomePageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GlobalizedWizard.ViewModel.CoffeeWizardViewModel" Collapsed="true">
+    <Position X="4.75" Y="1.25" Width="2" />
+    <AssociationLine Name="CupOfCoffee" Type="CoffeeLibrary.CupOfCoffee">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.086" Y="0.058" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>SAAAAAAAAAcAAABkIRAAAEQAgAAAIBAAIABQAAAQQAI=</HashCode>
+      <FileName>ViewModel\CoffeeWizardViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CupOfCoffee" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GlobalizedWizard.ViewModel.CoffeeTypeSizePageViewModel" Collapsed="true">
+    <Position X="2" Y="3" Width="2.5" />
+    <InheritanceLine Type="GlobalizedWizard.ViewModel.CoffeeWizardPageViewModelBase" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.812" Y="6" />
+        <Point X="4.812" Y="3.375" />
+        <Point X="4.5" Y="3.375" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAggAAAAAAChAAAAAAAAAAAAAAARAQAAIAAA=</HashCode>
+      <FileName>ViewModel\CoffeeTypeSizePageViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoffeeLibrary.CupOfCoffee">
+    <Position X="5" Y="2.5" Width="2" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GlobalizedWizard.ViewModel.CoffeeWizardPageViewModelBase" Collapsed="true">
+    <Position X="4.25" Y="6" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="CupOfCoffee" Type="CoffeeLibrary.CupOfCoffee">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.119" Y="0.07" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAIRgAAAAAgAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>ViewModel\CoffeeWizardPageViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CupOfCoffee" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="ZingitWizard.View.ZingitInstallationChecklistView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZingitWizard.View"
+        xmlns:vm="clr-namespace:ZingitWizard.ViewModel"
+        mc:Ignorable="d"
+        Height="300" Width="500">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Drop and Go Mapping"  FontWeight="Bold" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding Path=GoAndMapping}" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Label Content="Campaign Setup"  FontWeight="Bold" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="1" Grid.Column="1" IsChecked="{Binding Path=CampaignSetup}" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Label Content="SMS Content customization"  FontWeight="Bold" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="2" Grid.Column="1" IsChecked="{Binding Path=SMSContentCustomization, Mode=TwoWay}" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Label Content="Remove Omit bounceback message"  FontWeight="Bold" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="3" Grid.Column="1" IsChecked="{Binding Path=RemoveOmitBouncebackMessage, Mode=TwoWay}" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Label Content="Execution mode set to PRODUCTION"  FontWeight="Bold" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="4" Grid.Column="1" IsChecked="{Binding Path=ExecutionModeSetToPRODUCTION, Mode=TwoWay}" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Label Content="SMS Content (Paste here)"  FontWeight="Bold" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="5" Grid.Column="1" AcceptsReturn="True" TextWrapping="Wrap" AcceptsTab="True" BorderThickness="2" Text="{Binding Path=AppConfig.SMSContent, Mode=TwoWay}" BorderBrush="Black"  Margin="0, 3"
+                 Height="120" Width="220" VerticalAlignment="Stretch"/>
+    </Grid>
+</UserControl>

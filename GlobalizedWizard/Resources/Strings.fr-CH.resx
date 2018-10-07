@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationMainWindow_Button_RunWizard" xml:space="preserve">
+    <value>Exécuter l'assistant café</value>
+  </data>
+  <data name="ApplicationMainWindow_OrderCancelled" xml:space="preserve">
+    <value>Commande annulée</value>
+  </data>
+  <data name="ApplicationMainWindow_OrderComplete_Formatted" xml:space="preserve">
+    <value>Votre tasse de café est {0}, merci.</value>
+  </data>
+  <data name="ApplicationMainWindow_Title" xml:space="preserve">
+    <value>Le café de JJ et K-Dawg</value>
+  </data>
+  <data name="BeanType_Breakfast" xml:space="preserve">
+    <value>Mélange petit-déjeûner</value>
+  </data>
+  <data name="BeanType_DarkRoast" xml:space="preserve">
+    <value>Mélange noir</value>
+  </data>
+  <data name="BeanType_House" xml:space="preserve">
+    <value>Mélange laison</value>
+  </data>
+  <data name="BeanType_LightRoast" xml:space="preserve">
+    <value>Mélange léger</value>
+  </data>
+  <data name="BeanType_Organic" xml:space="preserve">
+    <value>Mélange organique</value>
+  </data>
+  <data name="CoffeeExtrasPageView_Header_Flavorings" xml:space="preserve">
+    <value>Parfums</value>
+  </data>
+  <data name="CoffeeExtrasPageView_Header_Temperature" xml:space="preserve">
+    <value>Température</value>
+  </data>
+  <data name="CoffeeSummaryPageViewModel_Label_NoFlavoringsSelected" xml:space="preserve">
+    <value>Corrade - (none)</value>
+    <comment>This is the text shown on the Summary page when the user did not select any flavorings for their cup of coffee.</comment>
+  </data>
+  <data name="CoffeeSummaryPageView_Header_BeanType" xml:space="preserve">
+    <value>Votre type de grains</value>
+  </data>
+  <data name="CoffeeSummaryPageView_Header_DrinkSize" xml:space="preserve">
+    <value>Taille de votre tasse</value>
+  </data>
+  <data name="CoffeeSummaryPageView_Header_Flavorings" xml:space="preserve">
+    <value>Vos parfums</value>
+  </data>
+  <data name="CoffeeSummaryPageView_Header_Temperature" xml:space="preserve">
+    <value>Votre température</value>
+  </data>
+  <data name="CoffeeTypeSizePageView_Header_BeanType" xml:space="preserve">
+    <value>Type de grains</value>
+  </data>
+  <data name="CoffeeTypeSizePageView_Header_DrinkSize" xml:space="preserve">
+    <value>Taille de votre tasse</value>
+  </data>
+  <data name="CoffeeWizardDialog_Title" xml:space="preserve">
+    <value>Commander une tasse de café</value>
+  </data>
+  <data name="CoffeeWizardView_Button_Cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="CoffeeWizardView_Button_Finish" xml:space="preserve">
+    <value>Terminer</value>
+  </data>
+  <data name="CoffeeWizardView_Button_MoveNext" xml:space="preserve">
+    <value>Suivant &gt;</value>
+  </data>
+  <data name="CoffeeWizardView_Button_MovePrevious" xml:space="preserve">
+    <value>&lt; Précédent</value>
+  </data>
+  <data name="CoffeeWizardView_Header_Steps" xml:space="preserve">
+    <value>Etapes</value>
+  </data>
+  <data name="CoffeeWizardView_Label_Price" xml:space="preserve">
+    <value>Prix</value>
+  </data>
+  <data name="DrinkSize_Large" xml:space="preserve">
+    <value>Grand</value>
+  </data>
+  <data name="DrinkSize_Medium" xml:space="preserve">
+    <value>Moyen</value>
+  </data>
+  <data name="DrinkSize_Small" xml:space="preserve">
+    <value>Petit</value>
+  </data>
+  <data name="Flavoring_Caramel" xml:space="preserve">
+    <value>Caramel</value>
+  </data>
+  <data name="Flavoring_Gingerbread" xml:space="preserve">
+    <value>Pain d'épices</value>
+  </data>
+  <data name="Flavoring_Hazelnut" xml:space="preserve">
+    <value>Noisette</value>
+  </data>
+  <data name="Flavoring_IrishCream" xml:space="preserve">
+    <value>Crème irlandaise</value>
+  </data>
+  <data name="Flavoring_None" xml:space="preserve">
+    <value>Aucun</value>
+  </data>
+  <data name="Flavoring_Pumpkin" xml:space="preserve">
+    <value>Citrouille</value>
+  </data>
+  <data name="Flavoring_Vanilla" xml:space="preserve">
+    <value>Vanille</value>
+  </data>
+  <data name="PageDisplayName_Extras" xml:space="preserve">
+    <value>Extras</value>
+  </data>
+  <data name="PageDisplayName_Summary" xml:space="preserve">
+    <value>Résumé</value>
+  </data>
+  <data name="PageDisplayName_TypeAndSize" xml:space="preserve">
+    <value>Taille de la tasse/ Type de grain</value>
+  </data>
+  <data name="PageDisplayName_Welcome" xml:space="preserve">
+    <value>Bienvenue</value>
+  </data>
+  <data name="Temperature_ExtraHot" xml:space="preserve">
+    <value>Extra chaud</value>
+  </data>
+  <data name="Temperature_Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="Temperature_WithIce" xml:space="preserve">
+    <value>Avec de la glace</value>
+  </data>
+</root>

@@ -1,0 +1,78 @@
+﻿<UserControl x:Class="ZingitWizard.View.ZingitTestInstallationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZingitWizard.View"
+             xmlns:vm="clr-namespace:ZingitWizard.ViewModel"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="600">
+    
+    <Grid Height="280" Width="520">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="Headless Mode"  FontWeight="Bold" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding Path=AppConfig.HeadlessModeChecked, Mode=TwoWay}" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+        
+        <Label Content="Execution Mode"  FontWeight="Bold" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton Grid.Row="1" Grid.Column="1" GroupName="ExecMode" Content="TEST" IsChecked="{Binding Path=ExecutionModeTestChecked, Mode=TwoWay}" VerticalAlignment="Center" FontWeight="Bold"/>
+        <RadioButton Grid.Row="1" Grid.Column="2" GroupName="ExecMode" Content="PRODUCTION" IsChecked="{Binding Path=ExecutionModeProductionChecked, Mode=TwoWay}" VerticalAlignment="Center" FontWeight="Bold"/>
+
+        <Label Content="Test Record Count" FontWeight="Bold" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" />
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=AppConfig.TestRecordCount, Mode=TwoWay}" BorderThickness="3" BorderBrush="Black" Margin="0,2,0,2"/>
+
+        <Label Content="Test Phone Number" FontWeight="Bold" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Path=AppConfig.TestPhoneNumber, Mode=TwoWay}" BorderThickness="3" BorderBrush="Black" TextAlignment="Left" VerticalContentAlignment="Center" Margin="0,2,0,2"/>
+
+        <Label Content="Send Reminder For" FontWeight="Bold" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" />
+        <ComboBox  Grid.Row="4" Grid.Column="1"
+                   ItemsSource="{Binding Path=SendReminderList}"
+                   DisplayMemberPath="Name"
+                   SelectedValue="{Binding Path=SelectedReminderEntry, Mode=TwoWay}"
+                   Text= "{Binding SelectedReminderEntry.Name, UpdateSourceTrigger=LostFocus}"
+                   VerticalContentAlignment="Center" FontSize="15" Margin="3">
+        </ComboBox>
+
+        <Label Content="Stop FTP" FontWeight="Bold" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" />
+        <CheckBox IsChecked="{Binding Path=AppConfig.StopFTPChecked, Mode=TwoWay}" Grid.Row="5" Grid.Column="1" Margin="0,3">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Label Content="Test Type" FontWeight="Bold" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
+        <RadioButton Grid.Row="6" Grid.Column="1" GroupName="TestType" Content="Task Scheduler" IsChecked="{Binding Path=TestTypeTaskSchedulerChecked, Mode=TwoWay}" VerticalAlignment="Center" FontWeight="Bold"/>
+        <RadioButton Grid.Row="6" Grid.Column="2" GroupName="TestType" Content="Direct EXE Run" IsChecked="{Binding Path=TestTypeDirectExeRunChecked, Mode=TwoWay}" VerticalAlignment="Center" FontWeight="Bold"/>
+
+        <Button Grid.Row="7" Grid.Column="1" Content="RUN TEST" 
+                Command="{Binding Path=RunTestCommand}"
+                Width="140" FontWeight="Bold" Margin="2,10,2,0">
+        </Button>
+        <Button Grid.Row="7" Grid.Column="2" Content="SAVE DATA"
+                Command="{Binding Path=SaveDataCommand}"
+                Width="140" FontWeight="Bold" Margin="2,10,2,0">
+        </Button>
+        <Button Grid.Row="8" Grid.Column="1" Content="VIEW LOG FILE" Command="{Binding Path=ViewLogFileCommand}" Width="140" FontWeight="Bold" Margin="2,10,2,0">
+        </Button>
+        <Button Grid.Row="8" Grid.Column="2" Content="VIEW DATA FILE" Command="{Binding Path=ViewDataFileCommand}" Width="140" FontWeight="Bold" Margin="2,10,2,0">
+        </Button>
+    </Grid>
+</UserControl>

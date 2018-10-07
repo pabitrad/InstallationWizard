@@ -1,0 +1,41 @@
+﻿<UserControl x:Class="ZingitWizard.View.ZingitFTPConfigurationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZingitWizard.View"
+             mc:Ignorable="d"
+             d:DesignHeight="350" d:DesignWidth="400"  Margin="0,20,0,0">
+    <Grid Width="340" Height="280">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock FontWeight="Bold" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center">FTP_HOST</TextBlock>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=AppConfig.FTPHost}" BorderThickness="3" BorderBrush="Black" Margin="0, 3"/>
+
+        <TextBlock FontWeight="Bold" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center">FTP_USERNAME</TextBlock>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=AppConfig.FTPUserName}" BorderThickness="3" BorderBrush="Black" Margin="0, 3"/>
+
+        <TextBlock FontWeight="Bold" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">FTP_PASSWORD</TextBlock>
+        <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding Path=AppConfig.FTPPassword}" BorderThickness="3" BorderBrush="Black" Margin="0, 3"/>
+
+        <TextBlock FontWeight="Bold" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">FTP_UPLOAD_FILE_PREFIX</TextBlock>
+        <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding Path=AppConfig.FTPUploadFilePrefix}" BorderThickness="3" BorderBrush="Black" Margin="0, 3"/>
+
+        <Button Grid.Row="7" Grid.Column="1" 
+                Command="{Binding Path=TestConnectionCommand}"
+                Content="TEST CONNECTION" Width="150" FontWeight="Bold" HorizontalAlignment="Right">
+        </Button>
+    </Grid>
+</UserControl>

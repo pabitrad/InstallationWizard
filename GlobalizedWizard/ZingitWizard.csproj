@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{45BE88E8-5176-4DC6-AEF3-E40148E9ADEF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZingitWizard</RootNamespace>
+    <AssemblyName>ZingitWizard</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>ftp://ftp.zingitsolutions.com/Chirotouch/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <SupportUrl>http://localhost</SupportUrl>
+    <ProductName>Installation Wizard</ProductName>
+    <PublisherName>Zingit Solutions</PublisherName>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>Zingit.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>692DD79CCB90B9CF8A7F765D6BC995251E56E49A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ZingitWizard_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>ZingitApp.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=2.8.1.0, Culture=neutral, PublicKeyToken=c416bc1b32d97233, processorArchitecture=MSIL">
+      <HintPath>..\packages\TaskScheduler.2.8.1\lib\net35\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Model\AppConfigModel.cs" />
+    <Compile Include="Model\TaskManager.cs" />
+    <Compile Include="ViewModel\ZingitCampaignSetupViewModel.cs" />
+    <Compile Include="ViewModel\ZingitClientSettingsViewModel.cs" />
+    <Compile Include="ViewModel\ZingitCopyFilesViewModel.cs" />
+    <Compile Include="ViewModel\ZingitDatabaseConfigViewModel.cs" />
+    <Compile Include="ViewModel\ZingitDropAndGoMappingViewModel.cs" />
+    <Compile Include="ViewModel\ZingitFinalizeSettingsViewModel.cs" />
+    <Compile Include="ViewModel\ZingitFTPConfigurationViewModel.cs" />
+    <Compile Include="ViewModel\ZingitInstallationChecklistViewModel.cs" />
+    <Compile Include="ViewModel\ZingitSchedulerConfigurationViewModel.cs" />
+    <Compile Include="ViewModel\ZingitTestInstallationViewModel.cs" />
+    <Compile Include="ViewModel\ZingitWizardPageViewModelBase.cs" />
+    <Compile Include="ViewModel\ZingitWizardViewModel.cs" />
+    <Compile Include="View\ZingitCampaignSetupInstructions.xaml.cs">
+      <DependentUpon>ZingitCampaignSetupInstructions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitDropAndGoMappingInstruction.xaml.cs">
+      <DependentUpon>ZingitDropAndGoMappingInstruction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitCampaignSetupView.xaml.cs">
+      <DependentUpon>ZingitCampaignSetupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitClientSettingsView.xaml.cs">
+      <DependentUpon>ZingitClientSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitCopyFilesView.xaml.cs">
+      <DependentUpon>ZingitCopyFilesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitDatabaseConfigView.xaml.cs">
+      <DependentUpon>ZingitDatabaseConfigView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitDropAndGoMappingView.xaml.cs">
+      <DependentUpon>ZingitDropAndGoMappingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitFinalizeSettingsView.xaml.cs">
+      <DependentUpon>ZingitFinalizeSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitFTPConfigurationView.xaml.cs">
+      <DependentUpon>ZingitFTPConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitInstallationChecklistView.xaml.cs">
+      <DependentUpon>ZingitInstallationChecklistView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitSchedulerConfigurationView.xaml.cs">
+      <DependentUpon>ZingitSchedulerConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitTestInstallationView.xaml.cs">
+      <DependentUpon>ZingitTestInstallationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ZingitWizardView.xaml.cs">
+      <DependentUpon>ZingitWizardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZingitWelcomeWindow.xaml.cs">
+      <DependentUpon>ZingitWelcomeWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ZingitWizardDialog.xaml.cs">
+      <DependentUpon>ZingitWizardDialog.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Resources\Strings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\OptionViewModel.cs" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="app.manifest" />
+    <None Include="Class Diagrams\OptionViewModel Diagram.cd" />
+    <None Include="Class Diagrams\Wizard ViewModels.cd" />
+    <None Include="Class Diagrams\Entity Relationships.cd" />
+    <AppDesigner Include="Properties\" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="ZingitApp.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ZingitWizard_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="View\ZingitCampaignSetupInstructions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZingitDropAndGoMappingInstruction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZingitCampaignSetupView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitClientSettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitCopyFilesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitDatabaseConfigView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitDropAndGoMappingView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitFinalizeSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZingitFTPConfigurationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitInstallationChecklistView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ZingitSchedulerConfigurationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitTestInstallationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ZingitWizardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZingitWelcomeWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ZingitWizardDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Strings.de-DE.resx" />
+    <EmbeddedResource Include="Resources\Strings.fr-CH.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.it-IT.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Zingit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Zingit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\AWC.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\Campaign_Instructions.jpg" />
+    <Resource Include="Resources\Images\Mapping_Instructions.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\Resources\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="de-DE\ZingitWizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="de\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="es\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr-CH\ZingitWizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="fr\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it-IT\ZingitWizard.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="it\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="pl\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="ru\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+    <PublishFile Include="zh-CN\Microsoft.Win32.TaskScheduler.resources">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Satellite</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

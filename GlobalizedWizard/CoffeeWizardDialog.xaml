@@ -1,0 +1,17 @@
+﻿<Window 
+  x:Class="ZingitWizard.CoffeeWizardDialog"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:res="clr-namespace:ZingitWizard.Resources"
+  xmlns:view="clr-namespace:ZingitWizard.View"  
+  Icon="Resources/Images/cupIcon.png"
+  Title="{x:Static res:Strings.CoffeeWizardDialog_Title}"
+  ShowInTaskbar="True"
+  Width="600" Height="400"
+  WindowStartupLocation="CenterScreen"
+  WindowStyle="ToolWindow"
+  >
+
+  <view:CoffeeWizardView />
+  
+</Window>

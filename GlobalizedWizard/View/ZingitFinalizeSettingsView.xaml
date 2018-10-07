@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ZingitWizard.View.ZingitFinalizeSettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ZingitWizard.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid Height="290" Width="290">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Congratulations. Installation is complete." FontWeight="Bold" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <Label Content="Email Address" FontWeight="Bold" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Path=RecepientEmailAddress}" BorderThickness="3" BorderBrush="Black" Margin="0, 3"/>
+
+        <Label Content="Subject" FontWeight="Bold" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding Path=Subject}" BorderThickness="3" BorderBrush="Black" Margin="0, 3"/>
+
+        <Label Content="Message" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <TextBox Grid.Row="3" Grid.Column="1" BorderThickness="3" Text="{Binding Path=Message, Mode=TwoWay}" BorderBrush="Black"  Margin="0, 3"
+                 AcceptsReturn="True" TextWrapping="Wrap" AcceptsTab="True" VerticalAlignment="Stretch"/>
+
+        <CheckBox Visibility="Hidden" IsChecked="{Binding Path=IsNotificationChecked, Mode=TwoWay}" Grid.Row="4" Grid.ColumnSpan="2" FontWeight="Bold" VerticalAlignment="Center">Send notification to Zingit Account Manager
+        </CheckBox>
+    </Grid>
+</UserControl>

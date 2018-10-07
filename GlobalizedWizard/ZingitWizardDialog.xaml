@@ -1,0 +1,17 @@
+﻿<Window 
+  x:Class="ZingitWizard.ZingitWizardDialog"
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:res="clr-namespace:ZingitWizard.Resources"
+  xmlns:view="clr-namespace:ZingitWizard.View"  
+  Icon="Resources/Zingit.ico"
+  Title="{x:Static res:Strings.ZingitInstallation_Title}"
+  ShowInTaskbar="True"
+  Width="800" Height="500"
+  WindowStartupLocation="CenterScreen"
+  WindowStyle="ToolWindow"
+  >
+
+  <view:ZingitWizardView />
+  
+</Window>
